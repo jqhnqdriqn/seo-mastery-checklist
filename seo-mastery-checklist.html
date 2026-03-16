@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Mastery Checklist & 90-Day Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f0e;
+    --bg-card: #141716;
+    --bg-hover: #1a1d1b;
+    --bg-active: #1f2320;
+    --accent: #4ade80;
+    --accent-dim: #166534;
+    --accent-soft: #14532d;
+    --text-primary: #f0f2f0;
+    --text-secondary: #8a9188;
+    --text-muted: #4a5249;
+    --border: #232623;
+    --border-light: #2d312c;
+    --phase-1: #4ade80;
+    --phase-2: #60a5fa;
+    --phase-3: #f59e0b;
+    --phase-4: #a78bfa;
+    --phase-5: #fb923c;
+    --phase-6: #34d399;
+    --phase-7: #f472b6;
+    --phase-8: #38bdf8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .header {
+    padding: 3rem 2rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .header-title h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--text-primary);
+  }
+
+  .header-title h1 span {
+    color: var(--accent);
+  }
+
+  .header-title p {
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    max-width: 480px;
+  }
+
+  .progress-summary {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    min-width: 220px;
+    text-align: right;
+  }
+
+  .progress-summary .big-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .progress-summary .label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .progress-bar-global {
+    width: 100%;
+    height: 4px;
+    background: var(--border);
+    border-radius: 99px;
+    margin-top: 1.5rem;
+    overflow: hidden;
+  }
+
+  .progress-bar-global-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 99px;
+    transition: width 0.5s ease;
+    width: 0%;
+  }
+
+  .nav-tabs {
+    display: flex;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-tabs::-webkit-scrollbar { display: none; }
+
+  .nav-tab {
+    padding: 1rem 1.25rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+
+  .nav-tab:hover { color: var(--text-secondary); }
+  .nav-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .phase-section { display: none; }
+  .phase-section.active { display: block; }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .phase-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid;
+  }
+
+  .phase-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  .phase-progress {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .phase-progress-track {
+    width: 120px;
+    height: 3px;
+    background: var(--border);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+
+  .phase-progress-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 0.4s ease;
+    width: 0%;
+  }
+
+  .phase-progress-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    min-width: 42px;
+    text-align: right;
+  }
+
+  .topics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 760px) {
+    .topics-grid { grid-template-columns: 1fr; }
+    .header-title h1 { font-size: 2rem; }
+  }
+
+  .topic-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .topic-card:hover { border-color: var(--border-light); }
+  .topic-card.completed { border-color: var(--accent-soft); }
+
+  .topic-header {
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .topic-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    min-width: 26px;
+    padding-top: 2px;
+  }
+
+  .topic-info { flex: 1; }
+
+  .topic-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    color: var(--text-primary);
+  }
+
+  .topic-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+
+  .expand-btn {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    padding: 2px 6px;
+    background: var(--border);
+    border-radius: 4px;
+    transition: all 0.2s;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+
+  .topic-header:hover .expand-btn { background: var(--border-light); color: var(--text-secondary); }
+
+  .topic-body {
+    display: none;
+    padding: 0 1.2rem 1.2rem 1.2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .topic-body.open { display: block; }
+
+  .checklist-group {
+    margin-top: 1rem;
+  }
+
+  .checklist-group-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.45rem 0;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.15s;
+    padding-left: 0.3rem;
+  }
+
+  .check-item:hover { background: var(--bg-hover); }
+
+  .check-item input[type="checkbox"] {
+    margin-top: 3px;
+    width: 15px;
+    height: 15px;
+    accent-color: var(--accent);
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 3px;
+  }
+
+  .check-label {
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  .check-item.done .check-label {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    text-decoration-color: var(--text-muted);
+  }
+
+  .check-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+    font-style: italic;
+  }
+
+  .tools-row {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tool-chip {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    padding: 3px 9px;
+    border-radius: 5px;
+    background: var(--bg-active);
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+  }
+
+  .insight-box {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-active);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .insight-box strong { color: var(--accent); font-weight: 500; }
+
+  .roadmap-section {
+    margin-top: 1.5rem;
+  }
+
+  .roadmap-week {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+  }
+
+  .roadmap-week-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.2rem;
+    cursor: pointer;
+  }
+
+  .week-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+
+  .week-title { font-weight: 500; font-size: 0.9rem; color: var(--text-primary); }
+  .week-outcome { font-size: 0.78rem; color: var(--text-muted); margin-left: auto; }
+
+  .roadmap-week-body {
+    display: none;
+    padding: 0 1.2rem 1.2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .roadmap-week-body.open { display: block; }
+
+  .roadmap-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 680px) {
+    .roadmap-cols { grid-template-columns: 1fr; }
+  }
+
+  .roadmap-col-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .roadmap-list { list-style: none; }
+
+  .roadmap-list li {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    padding: 3px 0;
+    padding-left: 0.8rem;
+    position: relative;
+  }
+
+  .roadmap-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+  }
+
+  .skill-tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 1rem;
+  }
+
+  .skill-tag {
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 500;
+    border: 1px solid var(--accent-dim);
+  }
+
+  .resources-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .resources-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+
+  .resource-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .resource-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 5px 8px;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .resource-link:hover { background: var(--bg-active); }
+
+  .resource-link .r-icon {
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+
+  .resource-link .r-text {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .resource-link .r-label {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .resource-link .r-source {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    margin-left: 4px;
+  }
+
+  .r-free { background: var(--accent-soft); color: var(--accent); }
+  .r-paid { background: #1e1a0a; color: #f59e0b; }
+  .r-video { background: #1a0a0a; color: #fb7185; }
+  .r-official { background: #0a1a2a; color: #60a5fa; }
+
+  .clear-btn {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 3px 8px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: transparent;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    margin-left: auto;
+  }
+
+  .clear-btn:hover { color: var(--text-secondary); border-color: var(--border-light); }
+
+  .section-note {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    max-width: 700px;
+  }
+
+  .highlight-stat {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    text-align: center;
+  }
+
+  .highlight-stat .num {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.6rem;
+    color: var(--accent);
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .highlight-stat .desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div class="header-title">
+      <h1>SEO Mastery<br><span>Checklist</span> + Roadmap</h1>
+      <p>A complete, enhanced guide covering all 15 SEO skill areas with a structured 90-day learning plan. Track your progress below.</p>
+    </div>
+    <div class="progress-summary">
+      <div class="big-num" id="globalPct">0%</div>
+      <div class="label">overall progress</div>
+      <div style="margin-top:0.8rem; font-size:0.78rem; color:var(--text-muted);">
+        <span id="globalDone">0</span> / <span id="globalTotal">0</span> items
+      </div>
+    </div>
+  </div>
+  <div class="progress-bar-global"><div class="progress-bar-global-fill" id="globalBar"></div></div>
+</div>
+
+<div class="nav-tabs" id="navTabs">
+  <div class="nav-tab active" onclick="switchTab('checklist', this)">Checklist</div>
+  <div class="nav-tab" onclick="switchTab('roadmap', this)">90-Day Roadmap</div>
+  <div class="nav-tab" onclick="switchTab('skills', this)">Core Skills</div>
+</div>
+
+<div class="main">
+
+<!-- ===== CHECKLIST TAB ===== -->
+<div class="phase-section active" id="tab-checklist">
+
+  <div class="stats-row">
+    <div class="highlight-stat"><div class="num">15</div><div class="desc">skill areas</div></div>
+    <div class="highlight-stat"><div class="num">90</div><div class="desc">day roadmap</div></div>
+    <div class="highlight-stat"><div class="num" id="phaseDone">0</div><div class="desc">topics done</div></div>
+    <div class="highlight-stat"><div class="num" id="checksDone">0%</div><div class="desc">checks done</div></div>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-header" style="margin-top:0.5rem">
+    <span class="phase-num" style="color:#4ade80;border-color:#166534;background:#052e16">Phase 1</span>
+    <span class="phase-title">Foundations</span>
+    <div class="phase-progress">
+      <div class="phase-progress-track"><div class="phase-progress-fill" id="pp1" style="background:#4ade80"></div></div>
+      <span class="phase-progress-label" id="pl1">0%</span>
+    </div>
+  </div>
+  <div class="topics-grid">
+
+    <!-- Topic 1 -->
+    <div class="topic-card" id="card1">
+      <div class="topic-header" onclick="toggleTopic(1)">
+        <span class="topic-num">01</span>
+        <div class="topic-info">
+          <div class="topic-name">SEO Fundamentals</div>
+          <div class="topic-tag" style="background:#052e16;color:#4ade80;border:1px solid #166534">Highest Priority</div>
+        </div>
+        <span class="expand-btn" id="eb1">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb1">
+        <div class="checklist-group">
+          <div class="checklist-group-title">How Search Engines Work</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'1a')"><div><div class="check-label">Understand crawling: Googlebot discovery, crawl budget, and how sitemaps guide crawlers</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'1b')"><div><div class="check-label">Understand indexing: how pages pass quality filters and enter Google's index</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'1c')"><div><div class="check-label">Understand ranking signals: over 200 factors including content, links, E-E-A-T, user signals</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'1d')"><div><div class="check-label">Learn E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness — Google's quality framework</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'1e')"><div><div class="check-label">Understand PageRank concept: how link authority flows between pages</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Search Intent & SERPs</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'1f')"><div><div class="check-label">Master the 4 intent types: informational, commercial, transactional, navigational</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'1g')"><div><div class="check-label">Study SERP features: AI Overviews, featured snippets, People Also Ask, local pack, video carousels</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'1h')"><div><div class="check-label">Understand how Google's algorithm updates (Panda, Penguin, Helpful Content) shape ranking</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'1i')"><div><div class="check-label">Learn about the Google Sandbox effect for new websites</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>Pro tip:</strong> Read Google's Search Quality Rater Guidelines (free PDF) — it explains exactly how human reviewers evaluate pages, which directly informs algorithm signals.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Google Search Console</span>
+          <span class="tool-chip">Ahrefs</span>
+          <span class="tool-chip">SEMrush</span>
+          <span class="tool-chip">Google SQRG PDF</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://developers.google.com/search/docs/fundamentals/how-search-works" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">How Search Works</span><span class="r-source">— Google Search Central (Official)</span></div></a>
+            <a class="resource-link" href="https://moz.com/beginners-guide-to-seo" target="_blank"><span class="r-icon r-free">M</span><div class="r-text"><span class="r-label">Beginner's Guide to SEO</span><span class="r-source">— Moz (Free, comprehensive)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/how-do-search-engines-work/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">How Search Engines Work</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Search Quality Rater Guidelines (PDF)</span><span class="r-source">— Google (Free, official)</span></div></a>
+            <a class="resource-link" href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">SEO Starter Guide</span><span class="r-source">— Google Search Central (Official)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic 2 -->
+    <div class="topic-card" id="card2">
+      <div class="topic-header" onclick="toggleTopic(2)">
+        <span class="topic-num">02</span>
+        <div class="topic-info">
+          <div class="topic-name">Keyword Research & Topic Mapping</div>
+          <div class="topic-tag" style="background:#052e16;color:#4ade80;border:1px solid #166534">Core Strategy</div>
+        </div>
+        <span class="expand-btn" id="eb2">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb2">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Keyword Analysis</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'2a')"><div><div class="check-label">Master keyword difficulty (KD) vs search volume tradeoff — target low KD, decent volume first</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'2b')"><div><div class="check-label">Identify parent topics (seed keywords) vs long-tail variations (3–6 word phrases)</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'2c')"><div><div class="check-label">Understand search volume thresholds: 100+/mo is viable for most niches</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'2d')"><div><div class="check-label">Learn competitor keyword gap analysis: find what rivals rank for that you don't</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'2e')"><div><div class="check-label">Identify seasonal keywords (e.g. "christmas gifts") using Google Trends</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'2f')"><div><div class="check-label">Avoid keyword cannibalization: never target the same keyword on 2+ pages</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Topic Clustering</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'2g')"><div><div class="check-label">Build keyword clusters: group related keywords into single content pieces</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'2h')"><div><div class="check-label">Map keywords to URL structure: one primary keyword per page, related variants supported</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'2i')"><div><div class="check-label">Create separate keyword maps for: service pages, blog content, location pages, product pages</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'2j')"><div><div class="check-label">Use AnswerThePublic for question-based keyword discovery</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>Key metric:</strong> CPC (cost-per-click) from Google Ads data reveals commercial value of keywords — high CPC = high buyer intent even at lower search volumes.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Ahrefs</span><span class="tool-chip">SEMrush</span><span class="tool-chip">Keyword Insights</span><span class="tool-chip">AnswerThePublic</span><span class="tool-chip">Google Trends</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://ahrefs.com/blog/keyword-research/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">Keyword Research: The Beginner's Guide</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://backlinko.com/keyword-research" target="_blank"><span class="r-icon r-free">B</span><div class="r-text"><span class="r-label">Keyword Research: The Definitive Guide</span><span class="r-source">— Backlinko (Free)</span></div></a>
+            <a class="resource-link" href="https://moz.com/keyword-research" target="_blank"><span class="r-icon r-free">M</span><div class="r-text"><span class="r-label">Keyword Research Guide</span><span class="r-source">— Moz (Free)</span></div></a>
+            <a class="resource-link" href="https://www.semrush.com/blog/keyword-research/" target="_blank"><span class="r-icon r-free">S</span><div class="r-text"><span class="r-label">Keyword Research Guide for SEO</span><span class="r-source">— SEMrush Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://trends.google.com/trends/" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Google Trends (Tool)</span><span class="r-source">— Google (Free, discover seasonal keywords)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic 3 -->
+    <div class="topic-card" id="card3">
+      <div class="topic-header" onclick="toggleTopic(3)">
+        <span class="topic-num">03</span>
+        <div class="topic-info">
+          <div class="topic-name">On-Page SEO</div>
+          <div class="topic-tag" style="background:#052e16;color:#4ade80;border:1px solid #166534">High Impact</div>
+        </div>
+        <span class="expand-btn" id="eb3">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb3">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Page Elements</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'3a')"><div><div class="check-label">Title tags: 50–60 chars, primary keyword near start, unique per page, compelling CTR</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'3b')"><div><div class="check-label">Meta descriptions: 150–160 chars, natural keyword inclusion, strong CTA — boosts CTR</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'3c')"><div><div class="check-label">Heading hierarchy: H1 (once, with keyword), H2s for main sections, H3s for subsections</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'3d')"><div><div class="check-label">URL structure: short, keyword-rich, hyphen-separated, no stop words (the, a, in)</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'3e')"><div><div class="check-label">Image SEO: descriptive alt text, compressed file sizes, WebP format, lazy loading</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Content Optimization</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'3f')"><div><div class="check-label">Use semantic/LSI keywords: related terms that reinforce topical relevance naturally in body copy</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'3g')"><div><div class="check-label">Match content depth to competition: analyze word count and coverage of top 10 results</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'3h')"><div><div class="check-label">Internal linking: link to relevant pages with descriptive anchor text, not "click here"</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'3i')"><div><div class="check-label">Add E-E-A-T signals: author bio, credentials, sources cited, date published/updated</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'3j')"><div><div class="check-label">Content freshness: update older posts with new data, add "last updated" date</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>CTR hack:</strong> Title tags with numbers, brackets, or questions outperform generic titles. "7 Best [X]" or "How to [X] in 2025" consistently get higher clicks.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Surfer SEO</span><span class="tool-chip">Clearscope</span><span class="tool-chip">Rank Math</span><span class="tool-chip">Yoast SEO</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://ahrefs.com/blog/on-page-seo/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">On-Page SEO: Complete Beginner's Guide</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://moz.com/learn/seo/on-page-factors" target="_blank"><span class="r-icon r-free">M</span><div class="r-text"><span class="r-label">On-Page Ranking Factors</span><span class="r-source">— Moz Learn SEO (Free)</span></div></a>
+            <a class="resource-link" href="https://backlinko.com/on-page-seo" target="_blank"><span class="r-icon r-free">B</span><div class="r-text"><span class="r-label">On-Page SEO: Definitive Guide</span><span class="r-source">— Backlinko (Free)</span></div></a>
+            <a class="resource-link" href="https://rankmath.com/kb/ultimate-guide-on-page-seo/" target="_blank"><span class="r-icon r-free">R</span><div class="r-text"><span class="r-label">Ultimate Guide to On-Page SEO</span><span class="r-source">— Rank Math (Free)</span></div></a>
+            <a class="resource-link" href="https://yoast.com/what-is-on-page-seo/" target="_blank"><span class="r-icon r-free">Y</span><div class="r-text"><span class="r-label">What Is On-Page SEO?</span><span class="r-source">— Yoast (Free)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end phase 1 grid -->
+
+  <!-- PHASE 2 -->
+  <div class="phase-header" style="margin-top:2rem">
+    <span class="phase-num" style="color:#60a5fa;border-color:#1e40af;background:#0c1a3a">Phase 2</span>
+    <span class="phase-title">Technical & Architecture</span>
+    <div class="phase-progress">
+      <div class="phase-progress-track"><div class="phase-progress-fill" id="pp2" style="background:#60a5fa"></div></div>
+      <span class="phase-progress-label" id="pl2">0%</span>
+    </div>
+  </div>
+  <div class="topics-grid">
+
+    <!-- Topic 4 -->
+    <div class="topic-card" id="card4">
+      <div class="topic-header" onclick="toggleTopic(4)">
+        <span class="topic-num">04</span>
+        <div class="topic-info">
+          <div class="topic-name">Technical SEO</div>
+          <div class="topic-tag" style="background:#0c1a3a;color:#60a5fa;border:1px solid #1e40af">Must Know</div>
+        </div>
+        <span class="expand-btn" id="eb4">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb4">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Crawlability & Indexing</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'4a')"><div><div class="check-label">robots.txt: control what Googlebot can/cannot crawl, test in GSC</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'4b')"><div><div class="check-label">XML sitemaps: list all important pages, submit to Google Search Console, exclude noindex pages</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'4c')"><div><div class="check-label">Canonical tags: prevent duplicate content issues by declaring the preferred URL version</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'4d')"><div><div class="check-label">HTTPS / SSL: Google uses HTTPS as a ranking signal — verify secure certificate is active</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'4e')"><div><div class="check-label">Noindex/nofollow: know when to use each — thin pages, thank-you pages, parameters</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'4f')"><div><div class="check-label">Redirects: 301 (permanent) vs 302 (temporary), fix redirect chains and loops</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Performance & Mobile</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'4g')"><div><div class="check-label">Core Web Vitals: LCP (loading), INP (interaction), CLS (layout shift) — Google ranking factors</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'4h')"><div><div class="check-label">Mobile-first indexing: Google primarily uses mobile version of site for ranking</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'4i')"><div><div class="check-label">Run technical audits: find broken links, missing titles, duplicate content, orphan pages</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'4j')"><div><div class="check-label">Hreflang tags: for multilingual/multi-regional sites — tells Google which language page to show</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>Quick wins:</strong> Fix broken internal links, add missing title tags, and resolve redirect chains first — these often give immediate ranking lifts with minimal effort.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Screaming Frog</span><span class="tool-chip">Sitebulb</span><span class="tool-chip">PageSpeed Insights</span><span class="tool-chip">GSC Coverage Report</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://developers.google.com/search/docs/crawling-indexing" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Crawling & Indexing Documentation</span><span class="r-source">— Google Search Central (Official)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/technical-seo/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">Technical SEO: The Beginner's Guide</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://moz.com/learn/seo/technical-seo" target="_blank"><span class="r-icon r-free">M</span><div class="r-text"><span class="r-label">Technical SEO Overview</span><span class="r-source">— Moz Learn (Free)</span></div></a>
+            <a class="resource-link" href="https://www.screamingfrog.co.uk/seo-spider/tutorials/" target="_blank"><span class="r-icon r-free">SF</span><div class="r-text"><span class="r-label">Screaming Frog Tutorials</span><span class="r-source">— Screaming Frog (Free)</span></div></a>
+            <a class="resource-link" href="https://pagespeed.web.dev/" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">PageSpeed Insights (Tool)</span><span class="r-source">— Google (Free)</span></div></a>
+            <a class="resource-link" href="https://web.dev/explore/learn-core-web-vitals" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Learn Core Web Vitals</span><span class="r-source">— web.dev by Google (Free)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic 5 -->
+    <div class="topic-card" id="card5">
+      <div class="topic-header" onclick="toggleTopic(5)">
+        <span class="topic-num">05</span>
+        <div class="topic-info">
+          <div class="topic-name">SEO Content Strategy</div>
+          <div class="topic-tag" style="background:#0c1a3a;color:#60a5fa;border:1px solid #1e40af">Long Game</div>
+        </div>
+        <span class="expand-btn" id="eb5">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb5">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Content Architecture</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'5a')"><div><div class="check-label">Pillar pages: comprehensive guides on broad topics (2,000–5,000+ words) that anchor a cluster</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'5b')"><div><div class="check-label">Topic clusters: supporting articles that target related subtopics and link back to the pillar</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'5c')"><div><div class="check-label">Content hubs: organized sections of a website dedicated to a single topic area</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'5d')"><div><div class="check-label">Content gap analysis: identify topics your competitors rank for that you haven't covered</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'5e')"><div><div class="check-label">Content refresh strategy: update high-value pages every 6–12 months with new data and sections</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Planning & Calendar</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'5f')"><div><div class="check-label">Build a content calendar: prioritize by keyword opportunity, competition, and business value</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'5g')"><div><div class="check-label">Match content format to intent: listicles (informational), comparison (commercial), guides (educational)</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'5h')"><div><div class="check-label">Internal link architecture: every new article links up to pillar page and to 2+ related articles</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>Topical authority:</strong> Google rewards sites that thoroughly cover a subject. 20 detailed posts about plumbing rank better than 20 posts scattered across unrelated topics.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Frase</span><span class="tool-chip">MarketMuse</span><span class="tool-chip">Ahrefs Content Gap</span><span class="tool-chip">Notion / Trello</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://ahrefs.com/blog/content-strategy/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">SEO Content Strategy: Step-by-Step Guide</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://backlinko.com/hub/content/content-clusters" target="_blank"><span class="r-icon r-free">B</span><div class="r-text"><span class="r-label">Topic Clusters & Pillar Pages Guide</span><span class="r-source">— Backlinko (Free)</span></div></a>
+            <a class="resource-link" href="https://blog.hubspot.com/marketing/topic-clusters-seo" target="_blank"><span class="r-icon r-free">H</span><div class="r-text"><span class="r-label">The Topic Cluster Model for SEO</span><span class="r-source">— HubSpot Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/content-gap-analysis/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">Content Gap Analysis for SEO</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://www.semrush.com/blog/pillar-page/" target="_blank"><span class="r-icon r-free">S</span><div class="r-text"><span class="r-label">What Is a Pillar Page? How to Create One</span><span class="r-source">— SEMrush Blog (Free)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-header" style="margin-top:2rem">
+    <span class="phase-num" style="color:#f59e0b;border-color:#92400e;background:#2d1b05">Phase 3</span>
+    <span class="phase-title">Authority & Off-Page</span>
+    <div class="phase-progress">
+      <div class="phase-progress-track"><div class="phase-progress-fill" id="pp3" style="background:#f59e0b"></div></div>
+      <span class="phase-progress-label" id="pl3">0%</span>
+    </div>
+  </div>
+  <div class="topics-grid">
+
+    <!-- Topic 6 -->
+    <div class="topic-card" id="card6">
+      <div class="topic-header" onclick="toggleTopic(6)">
+        <span class="topic-num">06</span>
+        <div class="topic-info">
+          <div class="topic-name">Link Building & Off-Page SEO</div>
+          <div class="topic-tag" style="background:#2d1b05;color:#f59e0b;border:1px solid #92400e">Authority Builder</div>
+        </div>
+        <span class="expand-btn" id="eb6">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb6">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Link Fundamentals</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'6a')"><div><div class="check-label">Domain Authority (DA) vs topical relevance: a link from a niche-relevant site often beats a high-DA unrelated site</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'6b')"><div><div class="check-label">Anchor text diversity: vary between branded, keyword-rich, naked URL, and generic anchors</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'6c')"><div><div class="check-label">Link velocity: gaining links too fast (especially from low-quality sources) triggers spam filters</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'6d')"><div><div class="check-label">Toxic backlinks: identify and disavow spammy links that could harm rankings</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Link Acquisition Tactics</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'6e')"><div><div class="check-label">Guest posting: write articles for relevant blogs with author bio link</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'6f')"><div><div class="check-label">Digital PR: create data studies, surveys, or newsworthy content that earns natural press links</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'6g')"><div><div class="check-label">Resource page link building: find "useful resources" pages and pitch your content for inclusion</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'6h')"><div><div class="check-label">Broken link building: find broken links on relevant sites, offer your content as replacement</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'6i')"><div><div class="check-label">HARO / Qwoted: respond to journalist queries to earn media mentions and links</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'6j')"><div><div class="check-label">Citation building: list businesses in industry directories and data aggregators</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>Quality over quantity:</strong> One link from a relevant, authoritative site is worth more than 100 links from low-quality directories. Focus on editorial links from real content.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Ahrefs</span><span class="tool-chip">BuzzStream</span><span class="tool-chip">Pitchbox</span><span class="tool-chip">HARO</span><span class="tool-chip">Hunter.io</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://ahrefs.com/blog/link-building/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">Link Building for SEO: Beginner's Guide</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://backlinko.com/link-building" target="_blank"><span class="r-icon r-free">B</span><div class="r-text"><span class="r-label">Link Building: The Definitive Guide</span><span class="r-source">— Backlinko (Free)</span></div></a>
+            <a class="resource-link" href="https://moz.com/learn/seo/link-building" target="_blank"><span class="r-icon r-free">M</span><div class="r-text"><span class="r-label">Link Building Overview</span><span class="r-source">— Moz Learn SEO (Free)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/broken-link-building/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">Broken Link Building Guide</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/digital-pr/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">Digital PR for Link Building</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://www.connectively.us/" target="_blank"><span class="r-icon r-free">C</span><div class="r-text"><span class="r-label">Connectively (formerly HARO) — Journalist Queries</span><span class="r-source">— Free tier available</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic 7 -->
+    <div class="topic-card" id="card7">
+      <div class="topic-header" onclick="toggleTopic(7)">
+        <span class="topic-num">07</span>
+        <div class="topic-info">
+          <div class="topic-name">Local SEO</div>
+          <div class="topic-tag" style="background:#2d1b05;color:#f59e0b;border:1px solid #92400e">Service Businesses</div>
+        </div>
+        <span class="expand-btn" id="eb7">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb7">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Google Business Profile</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'7a')"><div><div class="check-label">Complete GBP fully: all categories, hours, services, photos (interior, exterior, team, work)</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'7b')"><div><div class="check-label">Google Posts: publish weekly posts — offers, updates, events directly on GBP</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'7c')"><div><div class="check-label">Q&A management: proactively add common questions and answers in GBP Q&A section</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'7d')"><div><div class="check-label">Review strategy: get 10+ recent 5-star reviews and respond to every review (signals engagement)</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Local Citations & Pages</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'7e')"><div><div class="check-label">NAP consistency: Name, Address, Phone must be identical across every directory listing</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'7f')"><div><div class="check-label">Build citations: Yelp, Bing Places, Apple Maps, YellowPages, industry-specific directories</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'7g')"><div><div class="check-label">Local landing pages: unique pages per service area with local keyword targeting</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'7h')"><div><div class="check-label">Local schema markup: add LocalBusiness schema with address, phone, hours, geo coordinates</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'7i')"><div><div class="check-label">Understand proximity signals: how physical distance from searcher affects local pack rankings</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>Map pack ranking factors:</strong> Relevance (does your business match the query?), Distance (how close to the searcher?), Prominence (how well-known is the business?). All three matter.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">BrightLocal</span><span class="tool-chip">Whitespark</span><span class="tool-chip">Moz Local</span><span class="tool-chip">GBP Dashboard</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://moz.com/learn/seo/local" target="_blank"><span class="r-icon r-free">M</span><div class="r-text"><span class="r-label">Local SEO: The Complete Guide</span><span class="r-source">— Moz (Free)</span></div></a>
+            <a class="resource-link" href="https://support.google.com/business/answer/7091" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Google Business Profile Help Center</span><span class="r-source">— Google (Official)</span></div></a>
+            <a class="resource-link" href="https://whitespark.ca/local-seo-guide/" target="_blank"><span class="r-icon r-free">W</span><div class="r-text"><span class="r-label">Whitespark Local SEO Guide</span><span class="r-source">— Whitespark (Free)</span></div></a>
+            <a class="resource-link" href="https://www.brightlocal.com/learn/local-seo/" target="_blank"><span class="r-icon r-free">BL</span><div class="r-text"><span class="r-label">BrightLocal Local SEO Learning Hub</span><span class="r-source">— BrightLocal (Free)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/local-seo/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">Local SEO: A Simple (But Complete) Guide</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-header" style="margin-top:2rem">
+    <span class="phase-num" style="color:#a78bfa;border-color:#4c1d95;background:#1e0a3c">Phase 4</span>
+    <span class="phase-title">AI Search & Modern SEO</span>
+    <div class="phase-progress">
+      <div class="phase-progress-track"><div class="phase-progress-fill" id="pp4" style="background:#a78bfa"></div></div>
+      <span class="phase-progress-label" id="pl4">0%</span>
+    </div>
+  </div>
+  <div class="topics-grid">
+
+    <!-- Topic 8 -->
+    <div class="topic-card" id="card8">
+      <div class="topic-header" onclick="toggleTopic(8)">
+        <span class="topic-num">08</span>
+        <div class="topic-info">
+          <div class="topic-name">GEO — Generative Engine Optimization</div>
+          <div class="topic-tag" style="background:#1e0a3c;color:#a78bfa;border:1px solid #4c1d95">Future-Critical</div>
+        </div>
+        <span class="expand-btn" id="eb8">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb8">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Entity & Topical Signals</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'8a')"><div><div class="check-label">Entity optimization: ensure brand/business is a recognized entity (Wikipedia, Wikidata, Knowledge Panel)</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'8b')"><div><div class="check-label">Brand mentions: earn unlinked mentions on authoritative sites — AI models scrape these for source credibility</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'8c')"><div><div class="check-label">Topical authority: be the definitive source on a narrow topic — depth beats breadth for AI citations</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'8d')"><div><div class="check-label">Schema markup: add Organization, Article, FAQPage, Product schema to help AI parse your content</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Content for AI Platforms</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'8e')"><div><div class="check-label">Write structured, factual content: AI engines prefer clear statements, numbered lists, data points</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'8f')"><div><div class="check-label">Conversational query targeting: optimize for natural language questions ("what is the best X for Y")</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'8g')"><div><div class="check-label">Test visibility on Perplexity, ChatGPT, Google AI Overviews, and Claude for target queries</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'8h')"><div><div class="check-label">Monitor AI citation tracking tools (emerging category) to measure GEO performance</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>GEO vs SEO:</strong> Traditional SEO gets you on page 1. GEO gets your content cited inside AI-generated answers — increasingly where users stop scrolling.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Perplexity AI</span><span class="tool-chip">ChatGPT</span><span class="tool-chip">Google AI Overviews</span><span class="tool-chip">Schema.org</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://searchengineland.com/generative-engine-optimization-geo-guide-448042" target="_blank"><span class="r-icon r-free">SE</span><div class="r-text"><span class="r-label">Generative Engine Optimization (GEO) Guide</span><span class="r-source">— Search Engine Land (Free)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/generative-engine-optimization/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">GEO: What It Is and How to Do It</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://schema.org/docs/gs.html" target="_blank"><span class="r-icon r-official">S</span><div class="r-text"><span class="r-label">Getting Started with Schema.org</span><span class="r-source">— Schema.org (Official, Free)</span></div></a>
+            <a class="resource-link" href="https://developers.google.com/search/docs/appearance/ai-overviews" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">AI Overviews Best Practices</span><span class="r-source">— Google Search Central (Official)</span></div></a>
+            <a class="resource-link" href="https://www.semrush.com/blog/generative-engine-optimization/" target="_blank"><span class="r-icon r-free">S</span><div class="r-text"><span class="r-label">What Is GEO and How to Optimize</span><span class="r-source">— SEMrush Blog (Free)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic 9 -->
+    <div class="topic-card" id="card9">
+      <div class="topic-header" onclick="toggleTopic(9)">
+        <span class="topic-num">09</span>
+        <div class="topic-info">
+          <div class="topic-name">AEO — Answer Engine Optimization</div>
+          <div class="topic-tag" style="background:#1e0a3c;color:#a78bfa;border:1px solid #4c1d95">Snippet Targeting</div>
+        </div>
+        <span class="expand-btn" id="eb9">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb9">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Featured Snippet Strategy</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'9a')"><div><div class="check-label">Identify featured snippet opportunities: target keywords where Google shows a snippet box</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'9b')"><div><div class="check-label">Paragraph snippets: answer the question directly in 40–60 words after a subheading that mirrors the query</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'9c')"><div><div class="check-label">List snippets: use ordered/unordered lists for "how to" and "top X" queries</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'9d')"><div><div class="check-label">Table snippets: use HTML tables for comparison, pricing, or data queries</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'9e')"><div><div class="check-label">People Also Ask (PAA): target PAA questions with dedicated sections in your content</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Schema & Structure</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'9f')"><div><div class="check-label">FAQ schema: mark up Q&A content with FAQPage structured data for rich results</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'9g')"><div><div class="check-label">HowTo schema: step-by-step instructions that can appear in search as expandable how-to</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'9h')"><div><div class="check-label">Speakable markup: tag content sections suitable for voice search responses</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>Snippet formula:</strong> H2 heading = the question. First paragraph = 40–60 word direct answer. Then expand with detail. This structure wins featured snippets most consistently.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Schema Markup Generator</span><span class="tool-chip">Google Rich Results Test</span><span class="tool-chip">Ahrefs SERP</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Intro to Structured Data</span><span class="r-source">— Google Search Central (Official)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/featured-snippets-study/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">How to Optimize for Featured Snippets</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://moz.com/blog/rank-in-featured-snippets" target="_blank"><span class="r-icon r-free">M</span><div class="r-text"><span class="r-label">How to Rank in Featured Snippets</span><span class="r-source">— Moz Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://search.google.com/test/rich-results" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Rich Results Test Tool</span><span class="r-source">— Google (Free, validate your schema)</span></div></a>
+            <a class="resource-link" href="https://technicalseo.com/tools/schema-markup-generator/" target="_blank"><span class="r-icon r-free">T</span><div class="r-text"><span class="r-label">Schema Markup Generator</span><span class="r-source">— TechnicalSEO.com (Free tool)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-header" style="margin-top:2rem">
+    <span class="phase-num" style="color:#fb923c;border-color:#9a3412;background:#2c0e04">Phase 5</span>
+    <span class="phase-title">Analytics & Performance</span>
+    <div class="phase-progress">
+      <div class="phase-progress-track"><div class="phase-progress-fill" id="pp5" style="background:#fb923c"></div></div>
+      <span class="phase-progress-label" id="pl5">0%</span>
+    </div>
+  </div>
+  <div class="topics-grid">
+
+    <!-- Topic 10 -->
+    <div class="topic-card" id="card10">
+      <div class="topic-header" onclick="toggleTopic(10)">
+        <span class="topic-num">10</span>
+        <div class="topic-info">
+          <div class="topic-name">SEO Analytics & Reporting</div>
+          <div class="topic-tag" style="background:#2c0e04;color:#fb923c;border:1px solid #9a3412">Measure Everything</div>
+        </div>
+        <span class="expand-btn" id="eb10">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb10">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Core Metrics</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'10a')"><div><div class="check-label">Organic traffic: track sessions, users, and trends in GA4 — segment by landing page</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'10b')"><div><div class="check-label">Keyword rankings: monitor position tracking weekly for target keywords using rank tracker</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'10c')"><div><div class="check-label">Click-through rate (CTR) in Search Console: low CTR on high-impression pages = rewrite title tags</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'10d')"><div><div class="check-label">Conversion tracking: set up GA4 goals for form submissions, calls, purchases tied to organic traffic</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'10e')"><div><div class="check-label">Bounce rate / engagement rate: high bounce may signal content-intent mismatch</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Reporting & GSC</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'10f')"><div><div class="check-label">Google Search Console: monitor Coverage, Performance, Core Web Vitals, and Manual Actions reports</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'10g')"><div><div class="check-label">Build Looker Studio dashboards: combine GSC + GA4 data into automated monthly reports</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'10h')"><div><div class="check-label">Detect keyword cannibalization via GSC: same keyword ranking on 2+ URLs with split impressions</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'10i')"><div><div class="check-label">Connect SEO to revenue: calculate organic traffic value using avg CPC × traffic volume</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>Report format clients love:</strong> Organic traffic (MoM %), keywords ranking (total + in top 3), leads from organic, and top 3 wins this month. Simple, business-focused.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Google Analytics 4</span><span class="tool-chip">Google Search Console</span><span class="tool-chip">Looker Studio</span><span class="tool-chip">Ahrefs Rank Tracker</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://analytics.google.com/analytics/academy/" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Google Analytics Academy (GA4 Courses)</span><span class="r-source">— Google (Free, official certification)</span></div></a>
+            <a class="resource-link" href="https://search.google.com/search-console/about" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Google Search Console (Tool)</span><span class="r-source">— Google (Free)</span></div></a>
+            <a class="resource-link" href="https://developers.google.com/search/docs/monitor-debug/search-console-start" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Search Console Getting Started Guide</span><span class="r-source">— Google (Official, Free)</span></div></a>
+            <a class="resource-link" href="https://lookerstudio.google.com/gallery" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Looker Studio Template Gallery</span><span class="r-source">— Google (Free, copy SEO dashboard templates)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/seo-metrics/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">SEO Metrics: Which Ones to Track</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic 11 -->
+    <div class="topic-card" id="card11">
+      <div class="topic-header" onclick="toggleTopic(11)">
+        <span class="topic-num">11</span>
+        <div class="topic-info">
+          <div class="topic-name">Conversion Rate Optimization (CRO)</div>
+          <div class="topic-tag" style="background:#2c0e04;color:#fb923c;border:1px solid #9a3412">Revenue Impact</div>
+        </div>
+        <span class="expand-btn" id="eb11">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb11">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Page Optimization</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'11a')"><div><div class="check-label">CTA placement: above the fold + mid-page + end of content — test copy variations ("Get Free Quote" vs "Contact Us")</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'11b')"><div><div class="check-label">Landing page structure: headline (problem) → value prop → social proof → CTA → FAQ</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'11c')"><div><div class="check-label">Trust signals: reviews, testimonials, case studies, certifications, client logos near CTAs</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'11d')"><div><div class="check-label">Form optimization: fewer fields = higher completion — test removing optional fields</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Testing & Analysis</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'11e')"><div><div class="check-label">Heatmap analysis: use Hotjar/Clarity to identify where users click, scroll, and drop off</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'11f')"><div><div class="check-label">A/B testing: test one element at a time — headline, button color, CTA copy, page layout</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'11g')"><div><div class="check-label">User journey optimization: map the path from organic landing to conversion, reduce friction</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'11h')"><div><div class="check-label">Page speed impact: every 1-second delay in load time reduces conversions ~7%</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>CRO x SEO:</strong> Doubling your conversion rate has the same business impact as doubling your traffic — often much easier. Always optimize both.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Hotjar</span><span class="tool-chip">Microsoft Clarity</span><span class="tool-chip">Google Optimize</span><span class="tool-chip">VWO</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://cxl.com/guides/conversion-rate-optimization/" target="_blank"><span class="r-icon r-free">C</span><div class="r-text"><span class="r-label">CRO Guide: Conversion Rate Optimization</span><span class="r-source">— CXL Institute (Free)</span></div></a>
+            <a class="resource-link" href="https://www.hotjar.com/conversion-rate-optimization/guide/" target="_blank"><span class="r-icon r-free">H</span><div class="r-text"><span class="r-label">CRO Guide for Beginners</span><span class="r-source">— Hotjar (Free)</span></div></a>
+            <a class="resource-link" href="https://clarity.microsoft.com/" target="_blank"><span class="r-icon r-official">MS</span><div class="r-text"><span class="r-label">Microsoft Clarity (Free Heatmaps & Session Recordings)</span><span class="r-source">— Microsoft (Free)</span></div></a>
+            <a class="resource-link" href="https://unbounce.com/conversion-rate-optimization/" target="_blank"><span class="r-icon r-free">U</span><div class="r-text"><span class="r-label">Conversion Rate Optimization Hub</span><span class="r-source">— Unbounce (Free)</span></div></a>
+            <a class="resource-link" href="https://backlinko.com/cro-strategies" target="_blank"><span class="r-icon r-free">B</span><div class="r-text"><span class="r-label">CRO Strategies That Actually Work</span><span class="r-source">— Backlinko (Free)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-header" style="margin-top:2rem">
+    <span class="phase-num" style="color:#34d399;border-color:#065f46;background:#022c1e">Phase 6</span>
+    <span class="phase-title">Advanced & Scaling</span>
+    <div class="phase-progress">
+      <div class="phase-progress-track"><div class="phase-progress-fill" id="pp6" style="background:#34d399"></div></div>
+      <span class="phase-progress-label" id="pl6">0%</span>
+    </div>
+  </div>
+  <div class="topics-grid">
+
+    <!-- Topic 12 -->
+    <div class="topic-card" id="card12">
+      <div class="topic-header" onclick="toggleTopic(12)">
+        <span class="topic-num">12</span>
+        <div class="topic-info">
+          <div class="topic-name">CMS & Platform SEO</div>
+          <div class="topic-tag" style="background:#022c1e;color:#34d399;border:1px solid #065f46">Platform Skills</div>
+        </div>
+        <span class="expand-btn" id="eb12">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb12">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Platform Knowledge</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'12a')"><div><div class="check-label">WordPress: Rank Math or Yoast for meta data, correct permalink structure (/post-name/), speed plugins</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'12b')"><div><div class="check-label">Shopify: handle faceted navigation (filter pages), product schema, canonical tags for variants</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'12c')"><div><div class="check-label">Webflow: clean semantic HTML output, native SEO fields, fast CDN hosting — generally SEO-friendly</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'12d')"><div><div class="check-label">Wix: improved SEO in recent years — use Wix SEO Wiz, still limited vs WordPress for technical control</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'12e')"><div><div class="check-label">URL structure best practices: /category/subcategory/page — flat structure preferred for most sites</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>Agency reality:</strong> 70%+ of client sites run on WordPress. Master WP SEO first — Rank Math, correct permalink settings, caching, and image optimization cover most needs.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Rank Math</span><span class="tool-chip">Yoast SEO</span><span class="tool-chip">WP Rocket</span><span class="tool-chip">Shopify SEO apps</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://rankmath.com/kb/how-to-setup-rank-math/" target="_blank"><span class="r-icon r-free">R</span><div class="r-text"><span class="r-label">Rank Math Setup & Configuration Guide</span><span class="r-source">— Rank Math (Free)</span></div></a>
+            <a class="resource-link" href="https://yoast.com/wordpress-seo/" target="_blank"><span class="r-icon r-free">Y</span><div class="r-text"><span class="r-label">WordPress SEO: The Complete Guide</span><span class="r-source">— Yoast (Free)</span></div></a>
+            <a class="resource-link" href="https://help.shopify.com/en/manual/promoting-marketing/seo" target="_blank"><span class="r-icon r-official">SH</span><div class="r-text"><span class="r-label">Shopify SEO Documentation</span><span class="r-source">— Shopify (Official, Free)</span></div></a>
+            <a class="resource-link" href="https://university.webflow.com/lesson/seo-basics" target="_blank"><span class="r-icon r-free">WF</span><div class="r-text"><span class="r-label">Webflow SEO Basics</span><span class="r-source">— Webflow University (Free)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/wordpress-seo/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">WordPress SEO Made Easy</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic 13 -->
+    <div class="topic-card" id="card13">
+      <div class="topic-header" onclick="toggleTopic(13)">
+        <span class="topic-num">13</span>
+        <div class="topic-info">
+          <div class="topic-name">Advanced Technical SEO</div>
+          <div class="topic-tag" style="background:#022c1e;color:#34d399;border:1px solid #065f46">Expert Level</div>
+        </div>
+        <span class="expand-btn" id="eb13">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb13">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Advanced Topics</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'13a')"><div><div class="check-label">Structured data / schema markup: implement JSON-LD for Article, Product, Event, Review, FAQ</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'13b')"><div><div class="check-label">JavaScript SEO: how Googlebot renders JS — prerender for heavy JS frameworks, avoid critical content in JS-only</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'13c')"><div><div class="check-label">Log file analysis: analyze server logs to see exactly which URLs Google crawls, how often, and errors</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'13d')"><div><div class="check-label">Crawl budget optimization: noindex low-value pages, fix crawl traps, prioritize important URLs</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'13e')"><div><div class="check-label">Pagination handling: use rel=next/prev or canonical to handle paginated content correctly</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'13f')"><div><div class="check-label">International SEO: hreflang implementation, country/language URL structures (ccTLD, subdomain, subdirectory)</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'13g')"><div><div class="check-label">Edge SEO: implement redirects and header changes at CDN level without CMS access (Cloudflare Workers)</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>When to go deep:</strong> Advanced technical SEO matters most for large sites (10k+ pages), e-commerce, news sites, and JavaScript-heavy SPAs. For small sites, fundamentals are usually enough.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">DeepCrawl</span><span class="tool-chip">Schema Generator</span><span class="tool-chip">Screaming Frog</span><span class="tool-chip">Cloudflare</span><span class="tool-chip">Splunk (logs)</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Structured Data Policies & Guidelines</span><span class="r-source">— Google Search Central (Official)</span></div></a>
+            <a class="resource-link" href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">JavaScript SEO Basics</span><span class="r-source">— Google Search Central (Official)</span></div></a>
+            <a class="resource-link" href="https://www.screamingfrog.co.uk/log-file-analyser/" target="_blank"><span class="r-icon r-free">SF</span><div class="r-text"><span class="r-label">Log File Analyser Guide</span><span class="r-source">— Screaming Frog (Free)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/crawl-budget/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">Crawl Budget: What It Is and Why It Matters</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites" target="_blank"><span class="r-icon r-official">G</span><div class="r-text"><span class="r-label">Multi-Regional & Multilingual Sites</span><span class="r-source">— Google (Official)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic 14 -->
+    <div class="topic-card" id="card14">
+      <div class="topic-header" onclick="toggleTopic(14)">
+        <span class="topic-num">14</span>
+        <div class="topic-info">
+          <div class="topic-name">SEO Automation & AI Workflows</div>
+          <div class="topic-tag" style="background:#022c1e;color:#34d399;border:1px solid #065f46">Efficiency</div>
+        </div>
+        <span class="expand-btn" id="eb14">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb14">
+        <div class="checklist-group">
+          <div class="checklist-group-title">AI-Assisted SEO</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'14a')"><div><div class="check-label">AI content workflows: use LLMs for outlines, briefs, first drafts — always fact-check and add E-E-A-T</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'14b')"><div><div class="check-label">Prompt engineering for SEO: craft repeatable prompts for title generation, meta descriptions, schema</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'14c')"><div><div class="check-label">AI content detection awareness: Google evaluates content quality, not origin — helpful AI content is fine</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'14d')"><div><div class="check-label">Bulk metadata generation: use AI + spreadsheet to generate/optimize title tags at scale</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Process Automation</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'14e')"><div><div class="check-label">Automated audits: schedule weekly Screaming Frog crawls or use Sitebulb cloud crawls</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'14f')"><div><div class="check-label">SERP data extraction: use APIs (DataForSEO, SERP API) to pull rank data into reporting dashboards</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'14g')"><div><div class="check-label">Competitor monitoring: set up Ahrefs/SEMrush alerts for competitor new backlinks and rankings changes</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'14h')"><div><div class="check-label">No-code automation: Zapier/Make.com for auto-reporting, rank change alerts, GSC data pipelines</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>Leverage AI correctly:</strong> Use AI to handle the 80% that's templated (outlines, metas, briefs). Spend your time on the 20% that requires judgment: strategy, analysis, E-E-A-T signals.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Zapier</span><span class="tool-chip">Make.com</span><span class="tool-chip">DataForSEO API</span><span class="tool-chip">Claude / GPT-4</span><span class="tool-chip">Python + SEO</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://zapier.com/blog/seo-automation/" target="_blank"><span class="r-icon r-free">Z</span><div class="r-text"><span class="r-label">How to Automate SEO Tasks with Zapier</span><span class="r-source">— Zapier Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://www.semrush.com/blog/ai-seo/" target="_blank"><span class="r-icon r-free">S</span><div class="r-text"><span class="r-label">AI SEO: How to Use AI in Your SEO Strategy</span><span class="r-source">— SEMrush Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://searchengineland.com/python-seo-complete-guide-advanced-technical-seo-428530" target="_blank"><span class="r-icon r-free">SE</span><div class="r-text"><span class="r-label">Python for SEO: Complete Guide</span><span class="r-source">— Search Engine Land (Free)</span></div></a>
+            <a class="resource-link" href="https://dataforseo.com/apis/serp-api" target="_blank"><span class="r-icon r-paid">D</span><div class="r-text"><span class="r-label">DataForSEO API Documentation</span><span class="r-source">— DataForSEO (Paid API, free trial)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/ai-seo/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">AI for SEO: Practical Applications</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topic 15 -->
+    <div class="topic-card" id="card15">
+      <div class="topic-header" onclick="toggleTopic(15)">
+        <span class="topic-num">15</span>
+        <div class="topic-info">
+          <div class="topic-name">SEO Strategy & Consulting</div>
+          <div class="topic-tag" style="background:#022c1e;color:#34d399;border:1px solid #065f46">Highest Level</div>
+        </div>
+        <span class="expand-btn" id="eb15">expand ↓</span>
+      </div>
+      <div class="topic-body" id="tb15">
+        <div class="checklist-group">
+          <div class="checklist-group-title">Strategic Skills</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'15a')"><div><div class="check-label">SEO roadmaps: prioritized 6–12 month plans with clear milestones, deliverables, and KPIs</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'15b')"><div><div class="check-label">Competitive positioning: identify gaps vs competitors and find fastest path to ranking wins</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'15c')"><div><div class="check-label">Growth forecasting: project traffic and leads from keyword opportunity × avg CTR × conversion rate</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'15d')"><div><div class="check-label">Budget allocation: advise clients on balancing technical fixes vs content creation vs link building</div></div></label>
+        </div>
+        <div class="checklist-group" style="margin-top:1rem">
+          <div class="checklist-group-title">Client & Business Skills</div>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'15e')"><div><div class="check-label">Proposal writing: audit findings → opportunity sizing → recommended strategy → pricing</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'15f')"><div><div class="check-label">Pricing models: hourly, monthly retainer, project-based, or performance-based (revenue share)</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'15g')"><div><div class="check-label">KPI setting: agree on measurable targets (e.g. top-10 rankings for X keywords, +40% organic traffic in 6 months)</div></div></label>
+          <label class="check-item"><input type="checkbox" onchange="updateCheck(this,'15h')"><div><div class="check-label">Managing client expectations: SEO takes 3–6 months minimum — communicate timeline clearly upfront</div></div></label>
+        </div>
+        <div class="insight-box">
+          <strong>Fastest path to clients:</strong> Do a free mini-audit of a local business's Google visibility and present 3 quick wins. That conversation converts to paid work far more than cold pitching services.
+        </div>
+        <div class="tools-row">
+          <span class="tool-chip">Loom (audit videos)</span><span class="tool-chip">Looker Studio</span><span class="tool-chip">Notion (SOPs)</span><span class="tool-chip">Google Slides</span>
+        </div>
+        <div class="resources-section">
+          <div class="resources-title">Learn from these resources</div>
+          <div class="resource-links">
+            <a class="resource-link" href="https://ahrefs.com/blog/seo-strategy/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">How to Create an SEO Strategy</span><span class="r-source">— Ahrefs Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://moz.com/blog/category/consulting" target="_blank"><span class="r-icon r-free">M</span><div class="r-text"><span class="r-label">SEO Consulting Articles</span><span class="r-source">— Moz Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://backlinko.com/seo-strategy" target="_blank"><span class="r-icon r-free">B</span><div class="r-text"><span class="r-label">SEO Strategy: A Data-Driven Approach</span><span class="r-source">— Backlinko (Free)</span></div></a>
+            <a class="resource-link" href="https://www.semrush.com/blog/seo-proposal/" target="_blank"><span class="r-icon r-free">S</span><div class="r-text"><span class="r-label">How to Write an SEO Proposal</span><span class="r-source">— SEMrush Blog (Free)</span></div></a>
+            <a class="resource-link" href="https://ahrefs.com/blog/seo-audit/" target="_blank"><span class="r-icon r-free">A</span><div class="r-text"><span class="r-label">How to Do an SEO Audit</span><span class="r-source">— Ahrefs Blog (Free, step-by-step)</span></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end phase 6 grid -->
+
+  <div style="text-align:center; margin-top:2rem; padding: 1rem 0; border-top: 1px solid var(--border);">
+    <button class="clear-btn" style="margin:0 auto" onclick="clearAll()">Clear all progress</button>
+  </div>
+
+</div><!-- end checklist tab -->
+
+<!-- ===== ROADMAP TAB ===== -->
+<div class="phase-section" id="tab-roadmap">
+
+  <div class="section-note">
+    A structured 90-day (13-week) plan that takes you from zero to a deployable SEO skill set. Each week has a clear focus, practice tasks, and a measurable outcome. Click any week to expand details.
+  </div>
+
+  <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:0.75rem; margin-bottom:1.5rem">
+    <div class="highlight-stat"><div class="num">13</div><div class="desc">weeks total</div></div>
+    <div class="highlight-stat"><div class="num">8</div><div class="desc">skill phases</div></div>
+    <div class="highlight-stat"><div class="num">~10h</div><div class="desc">per week</div></div>
+  </div>
+
+  <div class="roadmap-section">
+
+    <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);font-weight:500;margin-bottom:1rem">Phase 1 — Foundations (Weeks 1–3)</div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#052e16;color:#4ade80;border:1px solid #166534">Week 1</span>
+        <span class="week-title">How Search Engines Work</span>
+        <span class="week-outcome">Understand why pages rank</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>Crawling, indexing, ranking</li><li>E-E-A-T framework</li><li>SERP features overview</li><li>Google's algorithm history</li><li>Read Search Quality Rater Guidelines (summary)</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Search 5 keywords, study top pages</li><li>Identify SERP features present</li><li>Set up Google Search Console on a site</li><li>Explore GSC Performance report</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Can explain why a page ranks</li><li>Know all major SERP features</li><li>Understand E-E-A-T concept</li><li>GSC configured and reading data</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#052e16;color:#4ade80;border:1px solid #166534">Week 2</span>
+        <span class="week-title">Keyword Research Fundamentals</span>
+        <span class="week-outcome">Build keyword maps</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>KD vs search volume tradeoff</li><li>Long-tail discovery methods</li><li>Keyword clustering techniques</li><li>CPC as commercial intent signal</li><li>Competitor gap analysis</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Build a 50-keyword list for a niche</li><li>Cluster into 5–8 topic groups</li><li>Identify 3 quick-win keywords (low KD)</li><li>Run a competitor keyword gap in Ahrefs</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Can use Ahrefs/SEMrush for research</li><li>Understand keyword clustering</li><li>Can identify opportunity keywords</li><li>Built a content keyword map</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#052e16;color:#4ade80;border:1px solid #166534">Week 3</span>
+        <span class="week-title">Search Intent & Content Matching</span>
+        <span class="week-outcome">Match content to searcher goals</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>4 intent types in detail</li><li>SERP analysis for intent signals</li><li>Content format matching (guide vs list vs comparison)</li><li>Dominant intent vs mixed intent SERPs</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Classify 20 keywords by intent type</li><li>SERP analysis: what format wins for each?</li><li>Map 10 keywords to page types</li><li>Identify 3 keywords with mismatched content</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Can instantly classify search intent</li><li>Know which content format wins per SERP</li><li>Can audit pages for intent mismatch</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);font-weight:500;margin:1.25rem 0 1rem">Phase 2 — On-Page SEO (Weeks 4–5)</div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#0c1a3a;color:#60a5fa;border:1px solid #1e40af">Week 4</span>
+        <span class="week-title">Page-Level Optimization</span>
+        <span class="week-outcome">Optimize any page for SEO</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>Title tag formula and CTR impact</li><li>Meta descriptions best practices</li><li>Heading hierarchy rules</li><li>Internal linking strategy</li><li>Image SEO (alt text, WebP, lazy load)</li><li>E-E-A-T content signals</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Optimize 5 existing blog posts</li><li>Rewrite weak title tags for CTR</li><li>Add internal links to 10 old posts</li><li>Install and configure Rank Math</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Can fully optimize any page</li><li>Know the on-page SEO checklist by heart</li><li>Can improve E-E-A-T signals on content</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#0c1a3a;color:#60a5fa;border:1px solid #1e40af">Week 5</span>
+        <span class="week-title">Content Architecture & Topic Clusters</span>
+        <span class="week-outcome">Build topical authority structure</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>Pillar page structure</li><li>Topic cluster model</li><li>Internal link architecture</li><li>Content hubs vs blogs</li><li>Content refresh strategy</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Design a complete topic cluster (1 pillar + 6 supporting articles)</li><li>Map internal linking plan</li><li>Identify top 3 pages to refresh</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Can design topical content architecture</li><li>Understand why clusters rank better</li><li>Can plan a content calendar</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);font-weight:500;margin:1.25rem 0 1rem">Phase 3 — Technical SEO (Weeks 6–7)</div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#2d1b05;color:#f59e0b;border:1px solid #92400e">Week 6</span>
+        <span class="week-title">Technical SEO Basics</span>
+        <span class="week-outcome">Run a complete technical audit</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>robots.txt and XML sitemaps</li><li>Crawl errors and indexing issues</li><li>Redirect types (301/302) and chains</li><li>Canonical tags usage</li><li>HTTPS and SSL certificates</li><li>Noindex vs nofollow</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Crawl a website with Screaming Frog</li><li>Fix top 10 technical issues found</li><li>Check GSC Coverage report</li><li>Verify sitemap submission in GSC</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Can perform basic technical audits</li><li>Can identify and fix crawl issues</li><li>Understand index coverage in GSC</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#2d1b05;color:#f59e0b;border:1px solid #92400e">Week 7</span>
+        <span class="week-title">Site Speed & Core Web Vitals</span>
+        <span class="week-outcome">Improve page performance scores</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>LCP, INP, CLS metrics</li><li>Image compression and formats (WebP)</li><li>Lazy loading, render-blocking resources</li><li>Caching and CDN basics</li><li>Mobile-first indexing implications</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Run PageSpeed Insights on 5 pages</li><li>Fix highest-impact speed issues</li><li>Check CWV in GSC report</li><li>Install caching plugin on WordPress</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Can read and act on CWV data</li><li>Can improve basic page speed</li><li>Know what each CWV metric means</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);font-weight:500;margin:1.25rem 0 1rem">Phase 4 — Link Building (Week 8)</div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#2d1b05;color:#f59e0b;border:1px solid #92400e">Week 8</span>
+        <span class="week-title">Link Building & Off-Page Authority</span>
+        <span class="week-outcome">Launch first outreach campaign</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>Domain authority vs topical relevance</li><li>Anchor text diversity rules</li><li>Guest posting process</li><li>Digital PR and HARO</li><li>Broken link building</li><li>Toxic link identification and disavow</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Analyze a site's backlink profile</li><li>Find 10 guest post opportunities</li><li>Write first outreach email</li><li>Submit to 5 quality directories</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Understand link quality signals</li><li>Have an active outreach pipeline</li><li>Know how to vet link opportunities</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);font-weight:500;margin:1.25rem 0 1rem">Phase 5 — Local SEO (Week 9)</div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#1e0a3c;color:#a78bfa;border:1px solid #4c1d95">Week 9</span>
+        <span class="week-title">Local SEO & GBP Optimization</span>
+        <span class="week-outcome">Rank a business in local map pack</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>GBP optimization best practices</li><li>NAP consistency rules</li><li>Citation building strategy</li><li>Review acquisition tactics</li><li>Local schema markup</li><li>Proximity, relevance, prominence signals</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Fully optimize a Google Business Profile</li><li>Build 10 consistent citations</li><li>Create a location landing page</li><li>Add LocalBusiness schema</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Can run a full local SEO campaign</li><li>Know all GBP optimization levers</li><li>Understand map pack ranking factors</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);font-weight:500;margin:1.25rem 0 1rem">Phase 6 — Analytics (Week 10)</div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#2c0e04;color:#fb923c;border:1px solid #9a3412">Week 10</span>
+        <span class="week-title">SEO Analytics & Reporting</span>
+        <span class="week-outcome">Build client-ready reports</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>GA4 organic traffic segments</li><li>GSC Performance data (CTR, impressions)</li><li>Keyword rank tracking setup</li><li>Conversion tracking in GA4</li><li>Looker Studio dashboard building</li><li>Connecting SEO to revenue</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Build a Looker Studio SEO dashboard</li><li>Set up conversion goals in GA4</li><li>Create a monthly SEO report template</li><li>Find CTR improvement opportunities in GSC</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Can create professional client reports</li><li>Understand what metrics matter most</li><li>Can prove SEO ROI to clients</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);font-weight:500;margin:1.25rem 0 1rem">Phase 7 — AI Search (Weeks 11–12)</div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#022c1e;color:#34d399;border:1px solid #065f46">Week 11</span>
+        <span class="week-title">GEO — Generative Engine Optimization</span>
+        <span class="week-outcome">Appear in AI-generated answers</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>Entity optimization and knowledge graph</li><li>What makes AI engines cite a source</li><li>Structured factual content formats</li><li>Brand mention building</li><li>Schema for AI parsing</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Test your target queries in Perplexity + ChatGPT</li><li>Restructure 3 pages with clear Q&A format</li><li>Add Organization schema</li><li>Identify entity building opportunities</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Can optimize content for AI citation</li><li>Understand how GEO differs from SEO</li><li>Can measure basic AI visibility</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#022c1e;color:#34d399;border:1px solid #065f46">Week 12</span>
+        <span class="week-title">AEO — Answer Engine Optimization</span>
+        <span class="week-outcome">Win featured snippets</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>Featured snippet types and targeting</li><li>People Also Ask optimization</li><li>FAQ and HowTo schema</li><li>Paragraph, list, table snippet formats</li><li>Speakable markup for voice</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Add FAQ sections to 5 service pages</li><li>Add FAQPage schema markup</li><li>Find snippet opportunities in Ahrefs</li><li>Reformat one guide for PAA targeting</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><div class="roadmap-list" style="list-style:none"><li style="padding-left:0.8rem">Can target and win featured snippets</li><li style="padding-left:0.8rem">Know all schema types for AEO</li><li style="padding-left:0.8rem">Can optimize for PAA boxes</li></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);font-weight:500;margin:1.25rem 0 1rem">Phase 8 — Strategy (Week 13)</div>
+
+    <div class="roadmap-week">
+      <div class="roadmap-week-header" onclick="toggleWeek(this)">
+        <span class="week-badge" style="background:#1e0a3c;color:#a78bfa;border:1px solid #4c1d95">Week 13</span>
+        <span class="week-title">SEO Strategy & Consulting Mindset</span>
+        <span class="week-outcome">Manage campaigns end-to-end</span>
+      </div>
+      <div class="roadmap-week-body">
+        <div class="roadmap-cols">
+          <div><div class="roadmap-col-title">Learn</div><ul class="roadmap-list"><li>Building SEO roadmaps</li><li>Proposal and audit structure</li><li>Growth forecasting methods</li><li>Competitive positioning</li><li>Pricing models for freelancers</li><li>Managing client expectations</li></ul></div>
+          <div><div class="roadmap-col-title">Practice</div><ul class="roadmap-list"><li>Create a complete 6-month SEO roadmap</li><li>Write a sample audit presentation</li><li>Define pricing for 3 service tiers</li><li>Do a live free audit for a local business</li></ul></div>
+          <div><div class="roadmap-col-title">Outcome</div><ul class="roadmap-list"><li>Can lead an SEO campaign start to finish</li><li>Have a service and pricing structure</li><li>Can pitch to potential clients</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== SKILLS TAB ===== -->
+<div class="phase-section" id="tab-skills">
+
+  <div class="section-note">The 5 skills that handle 80% of agency SEO work. Master these first before moving into advanced topics.</div>
+
+  <div class="topics-grid">
+    <div class="topic-card">
+      <div class="topic-header">
+        <div class="topic-info">
+          <div class="topic-name" style="font-size:1rem">Keyword Research</div>
+          <div class="topic-tag" style="background:#052e16;color:#4ade80;border:1px solid #166534">Priority 1</div>
+        </div>
+      </div>
+      <div class="topic-body" style="display:block">
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.6">Every SEO strategy starts here. Without knowing what people search for, you're guessing. Client acquisition, content strategy, and ROI all depend on solid keyword research.</p>
+        <div class="skill-tags-row" style="margin-top:0.75rem">
+          <span class="skill-tag">Ahrefs / SEMrush</span>
+          <span class="skill-tag">KD analysis</span>
+          <span class="skill-tag">Clustering</span>
+          <span class="skill-tag">Intent mapping</span>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-header">
+        <div class="topic-info">
+          <div class="topic-name" style="font-size:1rem">On-Page SEO</div>
+          <div class="topic-tag" style="background:#052e16;color:#4ade80;border:1px solid #166534">Priority 2</div>
+        </div>
+      </div>
+      <div class="topic-body" style="display:block">
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.6">The most repeatable billable skill. Every page on every client site needs on-page work. Title tags, headings, internal links, and content structure can be applied to hundreds of pages.</p>
+        <div class="skill-tags-row" style="margin-top:0.75rem">
+          <span class="skill-tag">Title tags</span>
+          <span class="skill-tag">Content optimization</span>
+          <span class="skill-tag">Internal linking</span>
+          <span class="skill-tag">Surfer SEO</span>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-header">
+        <div class="topic-info">
+          <div class="topic-name" style="font-size:1rem">Technical Audits</div>
+          <div class="topic-tag" style="background:#0c1a3a;color:#60a5fa;border:1px solid #1e40af">Priority 3</div>
+        </div>
+      </div>
+      <div class="topic-body" style="display:block">
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.6">A $500–$2,000 deliverable for most agencies. Running a Screaming Frog crawl and presenting findings in a clear report is a fundable skill. Most sites have fixable issues holding them back.</p>
+        <div class="skill-tags-row" style="margin-top:0.75rem">
+          <span class="skill-tag">Screaming Frog</span>
+          <span class="skill-tag">GSC Coverage</span>
+          <span class="skill-tag">Redirects</span>
+          <span class="skill-tag">Core Web Vitals</span>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-header">
+        <div class="topic-info">
+          <div class="topic-name" style="font-size:1rem">Local SEO</div>
+          <div class="topic-tag" style="background:#2d1b05;color:#f59e0b;border:1px solid #92400e">Priority 4</div>
+        </div>
+      </div>
+      <div class="topic-body" style="display:block">
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.6">The single fastest way to show clients measurable results. Local map pack rankings improve within weeks — not months. Every restaurant, tradesperson, and service business is a potential client.</p>
+        <div class="skill-tags-row" style="margin-top:0.75rem">
+          <span class="skill-tag">Google Business Profile</span>
+          <span class="skill-tag">Citations</span>
+          <span class="skill-tag">Reviews</span>
+          <span class="skill-tag">Local schema</span>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card" style="grid-column: span 2">
+      <div class="topic-header">
+        <div class="topic-info">
+          <div class="topic-name" style="font-size:1rem">Analytics & Reporting</div>
+          <div class="topic-tag" style="background:#2c0e04;color:#fb923c;border:1px solid #9a3412">Priority 5</div>
+        </div>
+      </div>
+      <div class="topic-body" style="display:block">
+        <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.6">Clients stay when you prove ROI. The difference between a 3-month contract and a long-term retainer is your ability to show month-over-month traffic growth, ranking improvements, and leads from organic search. GA4 + GSC + Looker Studio is the standard stack.</p>
+        <div class="skill-tags-row" style="margin-top:0.75rem">
+          <span class="skill-tag">Google Analytics 4</span>
+          <span class="skill-tag">Search Console</span>
+          <span class="skill-tag">Looker Studio</span>
+          <span class="skill-tag">Rank tracking</span>
+          <span class="skill-tag">Conversion attribution</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:2rem;padding:1.25rem 1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px">
+    <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);font-weight:500;margin-bottom:0.75rem">Suggested Learning Order</div>
+    <div style="display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center">
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">1. SEO Fundamentals</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">2. Keyword Research</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">3. On-Page SEO</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">4. Technical SEO</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">5. Content Strategy</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">6. Link Building</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">7. Local SEO</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">8. Analytics</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">9. GEO / AEO</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">10. CRO</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">11. Advanced Technical</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">12. Automation</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">13. Strategy</span>
+    </div>
+  </div>
+
+  <div style="margin-top:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem">
+    <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);font-weight:500;margin-bottom:1rem">Free Learning Hubs — Start Here</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem">
+      <a class="resource-link" href="https://moz.com/learn/seo" target="_blank"><span class="r-icon r-free" style="width:24px;height:24px">M</span><div class="r-text"><span class="r-label">Moz Learn SEO</span><span class="r-source">— Full curriculum, beginner to advanced</span></div></a>
+      <a class="resource-link" href="https://ahrefs.com/academy" target="_blank"><span class="r-icon r-free" style="width:24px;height:24px">A</span><div class="r-text"><span class="r-label">Ahrefs Academy</span><span class="r-source">— Free video courses with certification</span></div></a>
+      <a class="resource-link" href="https://backlinko.com/hub/seo" target="_blank"><span class="r-icon r-free" style="width:24px;height:24px">B</span><div class="r-text"><span class="r-label">Backlinko SEO Hub</span><span class="r-source">— Deep-dive guides by Brian Dean</span></div></a>
+      <a class="resource-link" href="https://developers.google.com/search/docs" target="_blank"><span class="r-icon r-official" style="width:24px;height:24px">G</span><div class="r-text"><span class="r-label">Google Search Central Docs</span><span class="r-source">— Official Google SEO documentation</span></div></a>
+      <a class="resource-link" href="https://www.semrush.com/academy/" target="_blank"><span class="r-icon r-free" style="width:24px;height:24px">S</span><div class="r-text"><span class="r-label">SEMrush Academy</span><span class="r-source">— Free courses + industry certifications</span></div></a>
+      <a class="resource-link" href="https://learningseo.io/" target="_blank"><span class="r-icon r-free" style="width:24px;height:24px">L</span><div class="r-text"><span class="r-label">LearningSEO.io</span><span class="r-source">— Free structured SEO learning roadmap</span></div></a>
+      <a class="resource-link" href="https://www.youtube.com/@AhrefsTV" target="_blank"><span class="r-icon r-video" style="width:24px;height:24px">▶</span><div class="r-text"><span class="r-label">Ahrefs YouTube Channel</span><span class="r-source">— Best free SEO video content on YouTube</span></div></a>
+      <a class="resource-link" href="https://searchengineland.com/" target="_blank"><span class="r-icon r-free" style="width:24px;height:24px">SE</span><div class="r-text"><span class="r-label">Search Engine Land</span><span class="r-source">— Daily SEO news and algorithm updates</span></div></a>
+    </div>
+  </div>
+
+  <div style="margin-top:1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem">
+    <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);font-weight:500;margin-bottom:1rem">Free SEO Tools Worth Bookmarking</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem">
+      <a class="resource-link" href="https://search.google.com/search-console" target="_blank"><span class="r-icon r-official" style="width:24px;height:24px">G</span><div class="r-text"><span class="r-label">Google Search Console</span><span class="r-source">— Monitor rankings, index coverage</span></div></a>
+      <a class="resource-link" href="https://analytics.google.com" target="_blank"><span class="r-icon r-official" style="width:24px;height:24px">G</span><div class="r-text"><span class="r-label">Google Analytics 4</span><span class="r-source">— Track organic traffic & conversions</span></div></a>
+      <a class="resource-link" href="https://www.screamingfrog.co.uk/seo-spider/" target="_blank"><span class="r-icon r-free" style="width:24px;height:24px">SF</span><div class="r-text"><span class="r-label">Screaming Frog SEO Spider</span><span class="r-source">— Free up to 500 URLs</span></div></a>
+      <a class="resource-link" href="https://pagespeed.web.dev/" target="_blank"><span class="r-icon r-official" style="width:24px;height:24px">G</span><div class="r-text"><span class="r-label">Google PageSpeed Insights</span><span class="r-source">— Test Core Web Vitals</span></div></a>
+      <a class="resource-link" href="https://answerthepublic.com/" target="_blank"><span class="r-icon r-free" style="width:24px;height:24px">A</span><div class="r-text"><span class="r-label">AnswerThePublic</span><span class="r-source">— Discover question-based keywords</span></div></a>
+      <a class="resource-link" href="https://www.semrush.com/analytics/keywordoverview/" target="_blank"><span class="r-icon r-free" style="width:24px;height:24px">S</span><div class="r-text"><span class="r-label">SEMrush Keyword Overview (Free)</span><span class="r-source">— 10 free searches/day</span></div></a>
+      <a class="resource-link" href="https://ahrefs.com/webmaster-tools" target="_blank"><span class="r-icon r-free" style="width:24px;height:24px">A</span><div class="r-text"><span class="r-label">Ahrefs Webmaster Tools</span><span class="r-source">— Free site audit + backlink data for your own site</span></div></a>
+      <a class="resource-link" href="https://clarity.microsoft.com/" target="_blank"><span class="r-icon r-official" style="width:24px;height:24px">MS</span><div class="r-text"><span class="r-label">Microsoft Clarity</span><span class="r-source">— Free heatmaps & session recordings</span></div></a>
+    </div>
+  </div>
+    <div style="display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center">
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">1. SEO Fundamentals</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">2. Keyword Research</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">3. On-Page SEO</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">4. Technical SEO</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">5. Content Strategy</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">6. Link Building</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">7. Local SEO</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">8. Analytics</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">9. GEO / AEO</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">10. CRO</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">11. Advanced Technical</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">12. Automation</span>
+      <span style="color:var(--text-muted);font-size:0.8rem">→</span>
+      <span style="font-size:0.82rem;background:var(--bg-active);border:1px solid var(--border-light);padding:4px 10px;border-radius:6px;color:var(--text-secondary)">13. Strategy</span>
+    </div>
+  </div>
+
+</div>
+
+</div><!-- /main -->
+
+<script>
+const checkState = {};
+
+function updateCheck(el, id) {
+  checkState[id] = el.checked;
+  const item = el.closest('.check-item');
+  if (el.checked) item.classList.add('done');
+  else item.classList.remove('done');
+  updateProgress();
+  saveState();
+}
+
+function updateProgress() {
+  const allChecks = document.querySelectorAll('.check-item input[type="checkbox"]');
+  const total = allChecks.length;
+  let done = 0;
+  allChecks.forEach(c => { if(c.checked) done++; });
+
+  document.getElementById('globalTotal').textContent = total;
+  document.getElementById('globalDone').textContent = done;
+  const pct = total > 0 ? Math.round(done/total*100) : 0;
+  document.getElementById('globalPct').textContent = pct + '%';
+  document.getElementById('globalBar').style.width = pct + '%';
+  document.getElementById('checksDone').textContent = pct + '%';
+
+  const phases = [
+    {cards:[1,2,3], ppId:'pp1', plId:'pl1'},
+    {cards:[4,5], ppId:'pp2', plId:'pl2'},
+    {cards:[6,7], ppId:'pp3', plId:'pl3'},
+    {cards:[8,9], ppId:'pp4', plId:'pl4'},
+    {cards:[10,11], ppId:'pp5', plId:'pl5'},
+    {cards:[12,13,14,15], ppId:'pp6', plId:'pl6'},
+  ];
+
+  let totalDone = 0;
+  phases.forEach(ph => {
+    let phTotal = 0, phDone = 0;
+    ph.cards.forEach(cardNum => {
+      const card = document.getElementById('card' + cardNum);
+      if(!card) return;
+      const checks = card.querySelectorAll('input[type="checkbox"]');
+      checks.forEach(c => {
+        phTotal++;
+        if(c.checked) { phDone++; totalDone++; }
+      });
+      const allChecked = checks.length > 0 && Array.from(checks).every(c => c.checked);
+      if(allChecked) card.classList.add('completed');
+      else card.classList.remove('completed');
+    });
+    const phPct = phTotal > 0 ? Math.round(phDone/phTotal*100) : 0;
+    const fill = document.getElementById(ph.ppId);
+    const label = document.getElementById(ph.plId);
+    if(fill) fill.style.width = phPct + '%';
+    if(label) label.textContent = phPct + '%';
+  });
+
+  const completedTopics = document.querySelectorAll('.topic-card.completed').length;
+  document.getElementById('phaseDone').textContent = completedTopics;
+}
+
+function toggleTopic(n) {
+  const body = document.getElementById('tb' + n);
+  const btn = document.getElementById('eb' + n);
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  btn.textContent = isOpen ? 'expand ↓' : 'collapse ↑';
+}
+
+function toggleWeek(header) {
+  const body = header.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+function switchTab(tabId, el) {
+  document.querySelectorAll('.phase-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  el.classList.add('active');
+}
+
+function clearAll() {
+  if(!confirm('Clear all progress?')) return;
+  document.querySelectorAll('.check-item input[type="checkbox"]').forEach(c => {
+    c.checked = false;
+    c.closest('.check-item').classList.remove('done');
+  });
+  Object.keys(checkState).forEach(k => delete checkState[k]);
+  updateProgress();
+  localStorage.removeItem('seoChecklistState');
+}
+
+function saveState() {
+  try {
+    const data = {};
+    document.querySelectorAll('.check-item input[type="checkbox"]').forEach((c, i) => {
+      data['c' + i] = c.checked;
+    });
+    localStorage.setItem('seoChecklistState', JSON.stringify(data));
+  } catch(e) {}
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem('seoChecklistState');
+    if(!raw) return;
+    const data = JSON.parse(raw);
+    const checks = document.querySelectorAll('.check-item input[type="checkbox"]');
+    checks.forEach((c, i) => {
+      if(data['c' + i]) {
+        c.checked = true;
+        c.closest('.check-item').classList.add('done');
+      }
+    });
+    updateProgress();
+  } catch(e) {}
+}
+
+loadState();
+updateProgress();
+</script>
+</body>
+</html>
